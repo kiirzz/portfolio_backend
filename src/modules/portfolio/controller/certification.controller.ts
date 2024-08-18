@@ -1,12 +1,12 @@
 import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
-import { certficationService } from '../services/certification.service';
+import { CertificationService } from '../services/certification.service';
 import { CreateCertificationDto } from '../dto/Create-certification.dto';
 import { UpdateCertificationDto } from '../dto/Update-certification.dto';
 import { Certification } from '../interfaces/certification.interface';
 
-@Controller('certifications')
+@Controller('certification')
 export class CertificationController {
-    constructor(private readonly certificationService: certficationService){}
+    constructor(private readonly certificationService: CertificationService){}
 
     @Post()
     create(@Body() createCertificationDto: CreateCertificationDto): Promise<Certification> {

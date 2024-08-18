@@ -6,12 +6,12 @@ export interface Project extends Document {
     image: string,
     description: string,
     size: number,
-    functions: string[] | null,
+    functions: string[],
     technology: {
-        frontend: string[] | null,
-        backend: string[] | null,  
-        database: string[] | null, 
-        other: string[] | null, 
+        frontend: string[],
+        backend: string[],  
+        database: string[], 
+        other: string[], 
     },
     link: {
         name: string,
